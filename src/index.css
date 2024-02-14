@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dancing-script {
+  font-family: "Dancing Script";
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.bg {
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.button-bg {
+  background: rgba( 192, 136, 241, 0.65 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  /* backdrop-filter: blur( 20px ); */
+  /* -webkit-backdrop-filter: blur( 20px ); */
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.crackBg {
+  background-image: url(./assets/crackBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.goesDown {
+  animation-name: downAnimation;
+  animation-duration: 3s;
+  /* animation-iteration-count: 2; */
+  animation-timing-function: ease-in;
+  /* animation-delay: 1s; */
+  /* animation-direction: alternate; */
+  animation-fill-mode:both;
+}
+
+@keyframes downAnimation {
+  0%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(900px);
+  }
+}
+
+.popAnimation {
+  animation-name: pop;
+  animation-duration: 2s;
+  /* animation-iteration-count: 2; */
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+  /* animation-direction: alternate; */
+  animation-fill-mode:both;
+}
+
+@keyframes pop {
+  0%{
+    transform: scale(0%);
+  }
+  50%{
+    transform: scale(60%)
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
+.triangle {
+  clip-path: polygon(49% 50%, 0% 100%, 100% 100%);
+  border: 2px solid black;
+}
+
+.pop-up-animation {
+  animation-name: popUp;
+  animation-duration: 3s;
+  /* animation-iteration-count: 2; */
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  /* animation-direction: alternate; */
+  animation-fill-mode:both;
+}
+
+@keyframes popUp {
+  0%{
+    transform: translateY(0px);
+    height: 96%;
+  }
+  100%{
+    transform: translateY(-180px);
+    height: fit-content;
+  }
+}
+
+.message-bg {
+  background: rgba( 144, 19, 254, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.messageTxt-bg {
+  background: rgba( 192, 136, 241, 0.65 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
